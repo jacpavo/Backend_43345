@@ -1,6 +1,6 @@
 class ProductManager{
     constructor(){
-        this.products = []
+        this.products = [];
     }
 
     getProducts(){
@@ -25,20 +25,20 @@ class ProductManager{
             precio,
             thumbnail,
             stock,
+            //code:this.products.lenght +1,
         };
-
         if (this.products.length === 0) {
             product.code = 1;
         } else {
             product.code = this.products[this.products.length - 1].code + 1;
         }
 
-        this.products.push(product)
-console.log('se almaceno un producto')
+        this.products.push(product);
+        console.log('se almaceno un producto');
     }
 
     getProductByCode(code){
-        const product = this.product.find((product)=>{
+        const product = this.products.find((product)=>{
             return product.code == code;
         });
         return product;
@@ -47,7 +47,6 @@ console.log('se almaceno un producto')
 
 const productManager = new ProductManager()
 
-console.log(
     productManager.agregarProduct(
         "Renault",
         "Duster 1.3 Turbo",
@@ -55,9 +54,8 @@ console.log(
         "https://1.bp.blogspot.com/-n1EOq5rlG90/YHRNfBLyIAI/AAAAAAAAAPA/NUz2sUajdeUOz69o5ZNRhmy70K_URx2HgCLcBGAsYHQ/s681/Renault%2BDuster%2B2021%2BEcuador%2Bfayalsautos.png",
         20,
     )
-);
 
-console.log(
+
     productManager.agregarProduct(
         "Ford",
         "Ragner 3.2 XLT",
@@ -65,6 +63,6 @@ console.log(
         "https://upload.wikimedia.org/wikipedia/commons/6/61/2018_Ford_Ranger_%28PX%29_XLT_4WD_4-door_utility_%282018-10-22%29_01.jpg",
         6,
     )
-)
+
 
 console.log(productManager.getProducts())
