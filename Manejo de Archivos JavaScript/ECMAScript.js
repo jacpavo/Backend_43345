@@ -67,4 +67,4 @@ console.log(
     )
 )
 
-console.log(productManager.getProducts())
+console.log(productManager.getProducts()) 
