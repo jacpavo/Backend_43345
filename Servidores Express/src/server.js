@@ -3,14 +3,14 @@ import ProductManager from './clases/ProductManager.js'
 
 const app = express()
 
-app.get ('productos', async (req, res)=>{
+app.get ('/productos', async (req, res)=>{
     console.log(req.res.limit)
-    const productos = await productManager.consultarProductos()
+    const productos = await productoManager.consultarProductosPorId(req.params.id)
     res.send(productos)
 })
 
 app.get('/productos/:id', async (req, res)=>{
-    const producto = await productoManager.consultarProductosPorId(req.params.id)
+    const producto = await ProductoManager.consultarProductosPorId(req.params.id)
     res.send(producto)
 })
 
