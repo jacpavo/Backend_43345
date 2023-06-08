@@ -4,7 +4,7 @@ import routerCart from './routes/cart.router.js';
 import viewsRouter from './routes/views.router.js';
 import handlebars from 'express-handlebars';
 import __dirname from './utils.js';
-import ProductManager from './classes/productManager.class.js';
+import ProductManager from './classes/ProductsManager.class.js';
 import { Server } from "socket.io";
 
 const app = express();

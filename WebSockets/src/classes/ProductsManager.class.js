@@ -18,7 +18,7 @@ export default class ManagerProducts {
     crearProductos = async (info)=> {
         const producto = await this.consultarProductos()
         info.id = uuidV4()
-        productos.push(info);
+        producto.push(info);
         await fs.promises.writeFile(path, JSON.stringify(productos, null, "/t"));
         return info;
     }
