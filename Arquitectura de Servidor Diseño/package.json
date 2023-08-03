@@ -1,0 +1,17 @@
+{
+  "name":"Arquitectura",
+  "version": "1.0.0",
+  "type":"module",
+  "main": "",
+  "description": "",
+  
+  "scripts":{
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.1"
+  }
+}
