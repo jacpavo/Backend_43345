@@ -1,0 +1,19 @@
+<div>   
+    <div>
+        <hr>
+        <h1>{{productoandUser.producto.title}} &nbsp; </h1>
+        <p>Descripcion: {{productoandUser.producto.description}} &nbsp; </p>
+        <p>Precio: ${{productoandUser.producto.price}} &nbsp; </p>
+        <p>Categoria: {{productoandUser.producto.category}} &nbsp; </p>
+        {{#if productoandUser.producto.stock}}
+        <p>Stock: {{productoandUser.producto.stock}} &nbsp; </p>
+    {{else}}
+        <p>Stock: Sin stock  </p>
+    {{/if}}
+        <button onclick="addToCartButton('{{productoandUser.user.idCart}}','{{productoandUser.producto._id}}')">Añadir al carrito</button>
+        <hr>
+        <a href="http://localhost:8080"><button>Todos los productos</button></a>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/cart.js"></script>
